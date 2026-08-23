@@ -1,5 +1,6 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
 
-// https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  site: 'https://nathancharlesczapnik-businessenglish.github.io',
+  base: '/nathan-charles-czapnik',
+});
