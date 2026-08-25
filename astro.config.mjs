@@ -1,8 +1,9 @@
+import sitemap from '@astrojs/sitemap';
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://nathancharlesczapnik-businessenglish.github.io',
-  base: '/nathan-charles-czapnik',
+  site: 'https://nathancharlesczapnik.github.io',
+  integrations: [sitemap()],
   markdown: {
     smartypants: false,
   },
