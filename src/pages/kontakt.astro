@@ -1,0 +1,106 @@
+---
+import { Car, Laptop, Mail, MapPin, Phone } from "lucide-astro";
+import Layout from "../layouts/Layout.astro";
+
+const BASE_URL = `${import.meta.env.BASE_URL.replace(/\/$/, "")}/`;
+---
+
+<Layout title="Kontakt | Nathan Charles Czapnik">
+
+  <header class="navbar">
+    <div class="logo">
+      <span>N</span>
+      <span class="divider"></span>
+      <span>C</span>
+    </div>
+
+    <nav>
+      <a href={`${BASE_URL}`}>Strona główna</a>
+      <a href={`${BASE_URL}o-mnie`}>O mnie</a>
+      <a href={`${BASE_URL}oferta`}>Oferta</a>
+      <a href={`${BASE_URL}blog`}>Blog</a>
+      <a href={`${BASE_URL}faq`}>FAQ</a>
+      <a href={`${BASE_URL}kontakt`}>Kontakt</a>
+    </nav>
+  </header>
+
+  <main class="contact-page">
+    <section class="contact-hero">
+      <p class="contact-kicker">KONTAKT</p>
+      <h1>Skontaktuj się ze mną</h1>
+      <div class="contact-rule"></div>
+      <p>Jeśli chcesz umówić lekcję lub masz pytanie dotyczące zajęć, skontaktuj się ze mną telefonicznie lub e-mailem.</p>
+    </section>
+
+    <section class="contact-section contact-details">
+      <article class="contact-card contact-phone">
+        <Phone size={32} strokeWidth={1.5} />
+        <p class="contact-card-label">TELEFON</p>
+        <a class="contact-value" href="tel:+48577970929">+48 577 970 929</a>
+        <a class="button-primary" href="tel:+48577970929">Zadzwoń</a>
+      </article>
+
+      <article class="contact-card contact-email">
+        <Mail size={32} strokeWidth={1.5} />
+        <p class="contact-card-label">E-MAIL</p>
+        <a class="contact-value contact-email-value" href="mailto:nathancharlesczapnik@gmail.com">nathancharlesczapnik@gmail.com</a>
+        <a class="button-secondary" href="mailto:nathancharlesczapnik@gmail.com">Napisz e-mail</a>
+      </article>
+
+      <article class="contact-card contact-location">
+        <MapPin size={32} strokeWidth={1.5} />
+        <p class="contact-card-label">MIEJSCE ZAJĘĆ</p>
+        <ul>
+          <li>Sandomierz i okolice</li>
+          <li>Tarnobrzeg</li>
+          <li>Możliwy dalszy dojazd po wcześniejszym ustaleniu</li>
+          <li>Zajęcia online</li>
+        </ul>
+        <div class="contact-location-icons" aria-hidden="true">
+          <Car size={20} strokeWidth={1.5} />
+          <Laptop size={20} strokeWidth={1.5} />
+        </div>
+      </article>
+    </section>
+
+    <section class="contact-section contact-process">
+      <div class="contact-section-heading">
+        <p class="contact-kicker">PIERWSZY KROK</p>
+        <h2>Jak zacząć?</h2>
+      </div>
+
+      <ol class="process-list">
+        <li><span>1</span>Skontaktuj się ze mną.</li>
+        <li><span>2</span>Krótko porozmawiamy o Twoim poziomie i celu.</li>
+        <li><span>3</span>Ustalimy formę, miejsce i termin zajęć.</li>
+        <li><span>4</span>Zaczynamy.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-item">
+      <svg class="footer-svg" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 21s6-5.1 6-11a6 6 0 1 0-12 0c0 5.9 6 11 6 11Z"></path>
+        <circle cx="12" cy="10" r="2.2"></circle>
+      </svg>
+      <span>Sandomierz, Polska</span>
+    </div>
+
+    <div class="footer-item">
+      <svg class="footer-svg" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M7 3h3l1 5-2 1.5c1.5 3 3.5 5 6.5 6.5L17 14l4 2v3c0 1.1-.9 2-2 2C10.2 21 3 13.8 3 5c0-1.1.9-2 2-2h2Z"></path>
+      </svg>
+      <a href="tel:+48577970929">+48 577 970 929</a>
+    </div>
+
+    <div class="footer-item">
+      <svg class="footer-svg" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3" y="5" width="18" height="14" rx="1"></rect>
+        <path d="m4 7 8 6 8-6"></path>
+      </svg>
+      <a href="mailto:nathancharlesczapnik@gmail.com">nathancharlesczapnik@gmail.com</a>
+    </div>
+  </footer>
+
+</Layout>

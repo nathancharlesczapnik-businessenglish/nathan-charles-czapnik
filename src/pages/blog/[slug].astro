@@ -1,0 +1,92 @@
+---
+import { getCollection, render } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const essays = await getCollection("essays");
+
+  return essays.map((essay) => ({
+    params: { slug: essay.id },
+    props: { essay },
+  }));
+}
+
+const { essay } = Astro.props;
+const { Content } = await render(essay);
+const BASE_URL = `${import.meta.env.BASE_URL.replace(/\/$/, "")}/`;
+---
+
+<Layout title={`${essay.data.title} | Blog | Nathan Charles Czapnik`}>
+
+  <header class="navbar">
+    <div class="logo">
+      <span>N</span>
+      <span class="divider"></span>
+      <span>C</span>
+    </div>
+
+    <nav>
+      <a href={`${BASE_URL}`}>Strona główna</a>
+      <a href={`${BASE_URL}o-mnie`}>O mnie</a>
+      <a href={`${BASE_URL}oferta`}>Oferta</a>
+      <a href={`${BASE_URL}blog`}>Blog</a>
+      <a href={`${BASE_URL}faq`}>FAQ</a>
+      <a href={`${BASE_URL}kontakt`}>Kontakt</a>
+    </nav>
+  </header>
+
+  <main class="essay-page">
+    <article class="essay-article">
+      <a class="essay-back" href={`${BASE_URL}blog`}>← Blog</a>
+      <p class="blog-kicker">BLOG</p>
+      <h1>{essay.data.title}</h1>
+      <p class="essay-label">{essay.data.label}</p>
+      <p class="essay-introduction">{essay.data.introduction}</p>
+      <div class="essay-comparison">
+        <figure>
+          <img
+            src={`${BASE_URL}${essay.data.heroImage}`}
+            alt="Brunelleschi's Dome in Florence"
+          />
+          <figcaption>Santa Maria del Fiore, Florence</figcaption>
+        </figure>
+        <figure>
+          <img
+            src={`${BASE_URL}${essay.data.secondaryImage}`}
+            alt="Compañía de Jesús in Quito"
+          />
+          <figcaption>Compañía de Jesús, Quito</figcaption>
+        </figure>
+      </div>
+      <div class="essay-body">
+        <Content />
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-item">
+      <svg class="footer-svg" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 21s6-5.1 6-11a6 6 0 1 0-12 0c0 5.9 6 11 6 11Z"></path>
+        <circle cx="12" cy="10" r="2.2"></circle>
+      </svg>
+      <span>Sandomierz, Polska</span>
+    </div>
+
+    <div class="footer-item">
+      <svg class="footer-svg" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M7 3h3l1 5-2 1.5c1.5 3 3.5 5 6.5 6.5L17 14l4 2v3c0 1.1-.9 2-2 2C10.2 21 3 13.8 3 5c0-1.1.9-2 2-2h2Z"></path>
+      </svg>
+      <a href="tel:+48577970929">+48 577 970 929</a>
+    </div>
+
+    <div class="footer-item">
+      <svg class="footer-svg" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3" y="5" width="18" height="14" rx="1"></rect>
+        <path d="m4 7 8 6 8-6"></path>
+      </svg>
+      <a href="mailto:nathancharlesczapnik@gmail.com">nathancharlesczapnik@gmail.com</a>
+    </div>
+  </footer>
+
+</Layout>

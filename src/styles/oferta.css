@@ -1,0 +1,469 @@
+/* =====================================================
+   OFFER PAGE
+===================================================== */
+
+.offer-page {
+  max-width: 1300px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.offer-hero {
+  padding: 72px 40px 64px;
+  background: var(--panel);
+}
+
+.offer-kicker {
+  color: var(--orange);
+  font-size: 14px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.offer-hero h1,
+.offer-section h2,
+.offer-cta h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.offer-hero h1 {
+  max-width: 780px;
+  font-size: 76px;
+}
+
+.offer-rule {
+  width: 80px;
+  height: 4px;
+  margin: 28px 0 30px;
+  background: var(--orange);
+}
+
+.offer-introduction {
+  max-width: 900px;
+}
+
+.offer-introduction p,
+.offer-section p,
+.offer-cta p {
+  color: var(--text-light);
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.offer-introduction p {
+  margin-bottom: 16px;
+}
+
+.offer-introduction p:last-child,
+.offer-cta p:last-child {
+  margin-bottom: 0;
+}
+
+.offer-section {
+  padding: 72px 40px;
+}
+
+.offer-section-heading {
+  margin-bottom: 38px;
+}
+
+.offer-section h2 {
+  font-size: 52px;
+}
+
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.audience-block {
+  min-height: 300px;
+  padding: 42px;
+  border: 1px solid var(--border);
+}
+
+.audience-block h3,
+.lesson-item h3,
+.principle-item h3,
+.format-item h3,
+.location-item h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.audience-block h3 {
+  font-size: 38px;
+  margin-bottom: 24px;
+}
+
+.audience-block p {
+  max-width: 500px;
+}
+
+.audience-panel {
+  background: var(--panel);
+}
+
+.audience-pink {
+  background: var(--pink);
+}
+
+.audience-orange {
+  background: var(--orange);
+}
+
+.audience-sage {
+  background: var(--sage);
+}
+
+.lesson-types {
+  background: var(--background);
+}
+
+.lesson-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 48px;
+  border-top: 1px solid var(--border);
+}
+
+.lesson-item {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 18px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.lesson-item svg,
+.format-item svg,
+.location-item svg {
+  color: var(--orange);
+}
+
+.lesson-item h3,
+.principle-item h3,
+.format-item h3,
+.location-item h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.lesson-item p,
+.principle-item p,
+.format-item p,
+.location-item p {
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.principles {
+  background: var(--panel);
+}
+
+.principle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.principle-item {
+  padding-top: 22px;
+  border-top: 2px solid var(--orange);
+}
+
+.principle-number {
+  display: block;
+  color: var(--orange);
+  font-size: 14px;
+  letter-spacing: .12em;
+  margin-bottom: 22px;
+}
+
+.formats {
+  background: var(--background);
+}
+
+.format-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.format-item {
+  padding: 36px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+}
+
+.format-item h3 {
+  margin-top: 28px;
+}
+
+.format-secondary {
+  background: var(--pink);
+}
+
+.locations {
+  background: var(--panel);
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.location-item {
+  padding-top: 24px;
+  border-top: 2px solid var(--orange);
+}
+
+.location-item h3 {
+  margin-top: 24px;
+}
+
+.pricing {
+  background: var(--background);
+}
+
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.price-card {
+  padding: 42px;
+  border: 1px solid var(--border);
+}
+
+.price-individual {
+  background: var(--orange);
+}
+
+.price-group {
+  background: var(--panel);
+}
+
+.price-label {
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  margin-bottom: 28px;
+}
+
+.price-value {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.price-value-text {
+  max-width: 440px;
+  font-size: 48px;
+}
+
+.price-duration {
+  display: block;
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+.price-card p:not(.price-label) {
+  color: var(--text);
+  font-size: 17px;
+  line-height: 1.7;
+  margin-top: 20px;
+}
+
+.offer-cta {
+  padding: 88px 40px;
+  text-align: center;
+  background: var(--panel);
+}
+
+.offer-cta h2 {
+  font-size: 58px;
+  margin-bottom: 22px;
+}
+
+.offer-cta p {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.offer-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 36px;
+}
+
+@media (max-width: 1024px) {
+  .offer-hero,
+  .offer-section,
+  .offer-cta {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .offer-hero {
+    padding-top: 60px;
+    padding-bottom: 52px;
+  }
+
+  .offer-hero h1 {
+    font-size: 64px;
+  }
+
+  .offer-section {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .offer-section h2 {
+    font-size: 46px;
+  }
+
+  .audience-block,
+  .price-card {
+    padding: 32px;
+  }
+
+  .audience-block {
+    min-height: 280px;
+  }
+
+  .principle-grid,
+  .location-grid {
+    gap: 22px;
+  }
+
+  .price-value {
+    font-size: 54px;
+  }
+
+  .price-value-text {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 700px) {
+  .offer-hero,
+  .offer-section,
+  .offer-cta {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .offer-hero {
+    padding-top: 48px;
+    padding-bottom: 44px;
+  }
+
+  .offer-hero h1 {
+    font-size: 52px;
+  }
+
+  .offer-introduction p,
+  .offer-section p,
+  .offer-cta p {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  .offer-section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .offer-section-heading {
+    margin-bottom: 28px;
+  }
+
+  .offer-section h2 {
+    font-size: 40px;
+  }
+
+  .audience-grid,
+  .lesson-grid,
+  .principle-grid,
+  .format-grid,
+  .location-grid,
+  .price-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .audience-block {
+    min-height: auto;
+    padding: 30px 24px;
+  }
+
+  .audience-block h3 {
+    font-size: 34px;
+  }
+
+  .lesson-grid {
+    gap: 0;
+  }
+
+  .lesson-item {
+    padding: 24px 0;
+  }
+
+  .lesson-item h3,
+  .principle-item h3,
+  .format-item h3,
+  .location-item h3 {
+    font-size: 28px;
+  }
+
+  .principle-grid,
+  .format-grid,
+  .location-grid,
+  .price-grid {
+    gap: 24px;
+  }
+
+  .format-item,
+  .price-card {
+    padding: 30px 24px;
+  }
+
+  .price-value {
+    font-size: 52px;
+  }
+
+  .price-value-text {
+    font-size: 38px;
+  }
+
+  .offer-cta {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .offer-cta h2 {
+    font-size: 46px;
+  }
+
+  .offer-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .offer-cta-buttons .button-primary,
+  .offer-cta-buttons .button-secondary {
+    width: 100%;
+    max-width: 320px;
+  }
+}

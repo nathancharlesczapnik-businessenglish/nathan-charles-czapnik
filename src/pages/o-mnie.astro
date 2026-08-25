@@ -1,0 +1,155 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const BASE_URL = `${import.meta.env.BASE_URL.replace(/\/$/, "")}/`;
+---
+
+<Layout title="O mnie | Nathan Charles Czapnik">
+
+  <header class="navbar">
+
+    <div class="logo">
+      <span>N</span>
+      <span class="divider"></span>
+      <span>C</span>
+    </div>
+
+    <nav>
+      <a href={`${BASE_URL}`}>Strona główna</a>
+      <a href={`${BASE_URL}o-mnie`}>O mnie</a>
+      <a href={`${BASE_URL}oferta`}>Oferta</a>
+      <a href={`${BASE_URL}blog`}>Blog</a>
+      <a href={`${BASE_URL}faq`}>FAQ</a>
+      <a href={`${BASE_URL}kontakt`}>Kontakt</a>
+    </nav>
+
+  </header>
+
+  <main class="about-page">
+
+    <section class="about-hero">
+
+      <div class="about-copy">
+
+        <p class="page-kicker">O MNIE</p>
+
+        <h1>
+          Nathan Charles<br />
+          Czapnik
+        </h1>
+
+        <div class="line"></div>
+
+        <p>
+          Jestem rodowitym londyńczykiem, który od kilku lat mieszka w Sandomierzu.
+          Całe życie spędziłem w Londynie — mieście wielokulturowym, w którym na co
+          dzień miałem kontakt z ludźmi posługującymi się angielskim jako drugim
+          językiem, pochodzącymi z najróżniejszych krajów i środowisk.
+        </p>
+
+        <p>
+          Zanim zacząłem uczyć, pracowałem w międzynarodowej firmie zajmującej się
+          wsparciem podróżujących służbowo i ekspatriantów na całym świecie. Praca
+          ta wymagała codziennej, precyzyjnej komunikacji z klientami, partnerami i
+          współpracownikami z różnych krajów — dzięki temu wiem, jak angielski
+          faktycznie funkcjonuje w międzynarodowym środowisku zawodowym, a nie tylko
+          jak wygląda w podręczniku.
+        </p>
+
+      </div>
+
+      <div class="about-photo">
+        <img
+  src={`${BASE_URL}images/o-mnie-photo.png`}
+  alt="Nathan Charles Czapnik"
+/>
+      </div>
+
+    </section>
+
+    <section class="qualifications">
+
+      <h2>Kwalifikacje</h2>
+
+      <div class="qualification-grid">
+
+        <article class="qualification-card qualification-kinari">
+          <h3>Licencjat</h3>
+          <p>Historia sztuki</p>
+          <span>Goldsmiths,<br />University of London</span>
+        </article>
+
+        <article class="qualification-card qualification-pink">
+          <h3>Magister</h3>
+          <p>Globalna ekonomia polityczna</p>
+          <span>Goldsmiths,<br />University of London</span>
+        </article>
+
+        <article class="qualification-card qualification-sage">
+          <h3>TEFL</h3>
+          <p>30 godzin osobiście i 200 godzin online</p>
+          <span>
+            Kwalifikacje uzyskane<br />
+            w Wielkiej Brytanii
+   
+          </span>
+        </article>
+
+      </div>
+
+    </section>
+
+    <section class="about-section">
+
+      <h2>Języki i doświadczenie międzynarodowe</h2>
+
+      <p>
+        Jako student języka polskiego na poziomie B1+ dobrze rozumiem, jakie
+        wyzwania — i satysfakcję — niesie ze sobą nauka nowego języka. To osobiste
+        doświadczenie daje mi wgląd w proces uczenia się, jakiego nie mają
+        nauczyciele, którzy nigdy nie musieli samodzielnie opanować drugiego języka.
+      </p>
+
+      <p>
+        Zanim ukończyłem 16 lat, odwiedziłem cztery kontynenty. Ta wczesna i
+        intensywna styczność z różnymi kulturami — ich historią, obyczajami i
+        sposobem myślenia — ukształtowała moje szerokie zainteresowanie światem,
+        które towarzyszy mi do dziś, zarówno w pracy, jak i poza nią.
+      </p>
+
+    </section>
+
+    <section class="about-section interests">
+
+      <h2>Zainteresowania</h2>
+
+      <p>
+        Poza nauczaniem zajmuję się muzyką — produkuję ją i gram jako DJ, ze
+        szczególnym zamiłowaniem do gatunków elektronicznych. Interesuję się także
+        literaturą, historią, sztuką i polityką — te tematy przenikają się z moim
+        wykształceniem i regularnie znajdują odzwierciedlenie w rozmowach, jakie
+        prowadzę na co dzień.
+      </p>
+
+    </section>
+
+    <section class="about-cta">
+
+      <h2>Chcesz rozpocząć naukę?</h2>
+
+      <a class="button-primary" href="tel:+48577970929">
+        Zadzwoń
+      </a>
+
+      <a
+        class="button-secondary"
+        href="mailto:nathancharlesczapnik@gmail.com"
+      >
+        Napisz e-mail
+      </a>
+
+    </section>
+
+  </main>
+
+</Layout>

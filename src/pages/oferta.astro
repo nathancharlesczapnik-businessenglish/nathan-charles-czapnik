@@ -1,0 +1,277 @@
+---
+import Layout from "../layouts/Layout.astro";
+import {
+  CalendarCheck,
+  Car,
+  CheckCircle2,
+  GraduationCap,
+  Laptop,
+  Mail,
+  MapPin,
+  MessageCircle,
+  Phone,
+  Target,
+  Users,
+} from "lucide-astro";
+
+const BASE_URL = `${import.meta.env.BASE_URL.replace(/\/$/, "")}/`;
+---
+
+<Layout title="Oferta | Nathan Charles Czapnik">
+
+  <header class="navbar">
+
+    <div class="logo">
+      <span>N</span>
+      <span class="divider"></span>
+      <span>C</span>
+    </div>
+
+    <nav>
+      <a href={`${BASE_URL}`}>Strona główna</a>
+      <a href={`${BASE_URL}o-mnie`}>O mnie</a>
+      <a href={`${BASE_URL}oferta`}>Oferta</a>
+      <a href={`${BASE_URL}blog`}>Blog</a>
+      <a href={`${BASE_URL}faq`}>FAQ</a>
+      <a href={`${BASE_URL}kontakt`}>Kontakt</a>
+    </nav>
+
+  </header>
+
+  <main class="offer-page">
+
+    <section class="offer-hero">
+      <p class="offer-kicker">OFERTA</p>
+      <h1>Angielski dopasowany do Ciebie</h1>
+      <div class="offer-rule"></div>
+      <div class="offer-introduction">
+        <p>
+          Prowadzę indywidualne i grupowe lekcje języka angielskiego dla dzieci, młodzieży i dorosłych — niezależnie od poziomu.
+        </p>
+        <p>
+          Zakres i sposób prowadzenia zajęć dopasowuję do potrzeb ucznia. Lekcje mogą koncentrować się na swobodnej komunikacji, nauce szkolnej, pracy, studiach lub konkretnym celu językowym.
+        </p>
+      </div>
+    </section>
+
+    <section class="offer-section offer-audience">
+      <div class="offer-section-heading">
+        <p class="offer-kicker">RODZAJE ZAJĘĆ</p>
+        <h2>Dla kogo?</h2>
+      </div>
+
+      <div class="audience-grid">
+        <article class="audience-block audience-panel">
+          <h3>Dzieci i młodzież</h3>
+          <p>
+            Zajęcia rozwijające umiejętności językowe poza szkolnym podręcznikiem, pomagające w nauce szkolnej, przygotowaniu do egzaminów oraz budowaniu pewności siebie w posługiwaniu się angielskim.
+          </p>
+        </article>
+
+        <article class="audience-block audience-pink">
+          <h3>Dorośli</h3>
+          <p>
+            Praktyczny angielski dopasowany do codziennego życia, podróży, pracy, zainteresowań lub po prostu chęci swobodniejszego posługiwania się językiem.
+          </p>
+        </article>
+
+        <article class="audience-block audience-orange">
+          <h3>Business English</h3>
+          <p>
+            Angielski wykorzystywany w rzeczywistych sytuacjach zawodowych — podczas spotkań, rozmów, korespondencji, prezentacji oraz kontaktu z międzynarodowymi klientami i współpracownikami.
+          </p>
+        </article>
+
+        <article class="audience-block audience-sage">
+          <h3>Academic English</h3>
+          <p>
+            Wsparcie w rozwijaniu języka potrzebnego na studiach — w dyskusjach, prezentacjach, czytaniu tekstów akademickich oraz tworzeniu własnych prac.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="offer-section lesson-types">
+      <div class="offer-section-heading">
+        <p class="offer-kicker">FORMA ZAJĘĆ</p>
+        <h2>Jak mogą wyglądać zajęcia?</h2>
+      </div>
+
+      <div class="lesson-grid">
+        <article class="lesson-item">
+          <MessageCircle size={28} strokeWidth={1.5} />
+          <div>
+            <h3>Konwersacje</h3>
+            <p>Swobodna rozmowa rozwijająca płynność, słownictwo, wymowę i umiejętność naturalnego posługiwania się językiem.</p>
+          </div>
+        </article>
+
+        <article class="lesson-item">
+          <GraduationCap size={28} strokeWidth={1.5} />
+          <div>
+            <h3>Przygotowanie do egzaminów</h3>
+            <p>Praca nad językiem, zadaniami egzaminacyjnymi i obszarami wymagającymi szczególnej uwagi.</p>
+          </div>
+        </article>
+
+        <article class="lesson-item">
+          <Target size={28} strokeWidth={1.5} />
+          <div>
+            <h3>Konkretny cel</h3>
+            <p>Przygotowanie do rozmowy kwalifikacyjnej, prezentacji, podróży, spotkania biznesowego lub innej konkretnej sytuacji wymagającej użycia angielskiego.</p>
+          </div>
+        </article>
+
+        <article class="lesson-item">
+          <CalendarCheck size={28} strokeWidth={1.5} />
+          <div>
+            <h3>Regularna nauka</h3>
+            <p>Systematyczna praca nad słownictwem, gramatyką, wymową, rozumieniem języka i przede wszystkim komunikacją.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="offer-section principles">
+      <div class="offer-section-heading">
+        <p class="offer-kicker">METODA</p>
+        <h2>Jak pracuję?</h2>
+      </div>
+
+      <div class="principle-grid">
+        <article class="principle-item">
+          <span class="principle-number">01</span>
+          <h3>Komunikacja</h3>
+          <p>Język służy przede wszystkim do porozumiewania się. Dlatego mówienie i aktywne używanie angielskiego stanowią ważną część zajęć.</p>
+        </article>
+
+        <article class="principle-item">
+          <span class="principle-number">02</span>
+          <h3>Indywidualne podejście</h3>
+          <p>Nie prowadzę wszystkich uczniów według jednego schematu. Materiały, tempo i sposób prowadzenia zajęć dobieram do poziomu, potrzeb, wieku i zainteresowań konkretnej osoby lub grupy.</p>
+        </article>
+
+        <article class="principle-item">
+          <span class="principle-number">03</span>
+          <h3>Praktyka</h3>
+          <p>Nowe słownictwo i struktury językowe wykorzystujemy w rozmowie i sytuacjach, w których rzeczywiście mogą być potrzebne.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="offer-section formats">
+      <div class="offer-section-heading">
+        <p class="offer-kicker">ELASTYCZNA FORMA</p>
+        <h2>Indywidualnie lub grupowo</h2>
+      </div>
+
+      <div class="format-grid">
+        <article class="format-item format-primary">
+          <Users size={30} strokeWidth={1.5} />
+          <h3>Zajęcia indywidualne</h3>
+          <p>Pełna godzina poświęcona jednej osobie pozwala skoncentrować się na jej konkretnych potrzebach, mocnych stronach i obszarach wymagających dalszej pracy.</p>
+        </article>
+
+        <article class="format-item format-secondary">
+          <CheckCircle2 size={30} strokeWidth={1.5} />
+          <h3>Zajęcia grupowe</h3>
+          <p>Prowadzę również zajęcia dla grup. Ich charakter, częstotliwość i program mogą zostać dopasowane do wspólnych potrzeb uczestników.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="offer-section locations">
+      <div class="offer-section-heading">
+        <p class="offer-kicker">MIEJSCE</p>
+        <h2>Gdzie odbywają się zajęcia?</h2>
+      </div>
+
+      <div class="location-grid">
+        <article class="location-item">
+          <MapPin size={28} strokeWidth={1.5} />
+          <h3>Sandomierz i okolice</h3>
+          <p>Dojeżdżam do uczniów na terenie Sandomierza i w okolicznych miejscowościach. Chętnie prowadzę również zajęcia w pobliskich miastach, takich jak Tarnobrzeg.</p>
+        </article>
+
+        <article class="location-item">
+          <Car size={28} strokeWidth={1.5} />
+          <h3>Dalszy dojazd</h3>
+          <p>Mam własny samochód, dlatego mogę również prowadzić zajęcia w bardziej oddalonych miejscowościach. Możliwość dojazdu ustalam indywidualnie, biorąc pod uwagę odległość, liczbę godzin zajęć oraz cenę.</p>
+        </article>
+
+        <article class="location-item">
+          <Laptop size={28} strokeWidth={1.5} />
+          <h3>Online</h3>
+          <p>Prowadzę również lekcje online — niezależnie od miejsca zamieszkania.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="offer-section pricing">
+      <div class="offer-section-heading">
+        <p class="offer-kicker">CENA ZAJĘĆ</p>
+        <h2>Cennik</h2>
+      </div>
+
+      <div class="price-grid">
+        <article class="price-card price-individual">
+          <p class="price-label">CENNIK — ZAJĘCIA INDYWIDUALNE</p>
+          <strong class="price-value">100 zł</strong>
+          <span class="price-duration">60 minut</span>
+          <p>Cena dotyczy indywidualnej, 60-minutowej lekcji języka angielskiego.</p>
+        </article>
+
+        <article class="price-card price-group">
+          <p class="price-label">CENNIK — ZAJĘCIA GRUPOWE</p>
+          <strong class="price-value price-value-text">Cena ustalana indywidualnie</strong>
+          <p>Cena zależy m.in. od liczby uczestników, rodzaju zajęć, ich częstotliwości oraz miejsca prowadzenia lekcji.</p>
+          <p>Skontaktuj się, aby omówić szczegóły.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="offer-cta">
+      <h2>Chcesz rozpocząć naukę?</h2>
+      <p>Napisz lub zadzwoń — możemy porozmawiać o Twoim poziomie, celu i tym, jak powinny wyglądać zajęcia.</p>
+      <div class="offer-cta-buttons">
+        <a class="button-primary" href="tel:+48577970929">
+          <Phone size={18} />
+          <span>Zadzwoń</span>
+        </a>
+        <a class="button-secondary" href="mailto:nathancharlesczapnik@gmail.com">
+          <Mail size={18} />
+          <span>Napisz e-mail</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+
+    <div class="footer-item">
+      <svg class="footer-svg" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 21s6-5.1 6-11a6 6 0 1 0-12 0c0 5.9 6 11 6 11Z"></path>
+        <circle cx="12" cy="10" r="2.2"></circle>
+      </svg>
+      <span>Sandomierz, Polska</span>
+    </div>
+
+    <div class="footer-item">
+      <svg class="footer-svg" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M7 3h3l1 5-2 1.5c1.5 3 3.5 5 6.5 6.5L17 14l4 2v3c0 1.1-.9 2-2 2C10.2 21 3 13.8 3 5c0-1.1.9-2 2-2h2Z"></path>
+      </svg>
+      <a href="tel:+48577970929">+48 577 970 929</a>
+    </div>
+
+    <div class="footer-item">
+      <svg class="footer-svg" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3" y="5" width="18" height="14" rx="1"></rect>
+        <path d="m4 7 8 6 8-6"></path>
+      </svg>
+      <a href="mailto:nathancharlesczapnik@gmail.com">nathancharlesczapnik@gmail.com</a>
+    </div>
+
+  </footer>
+
+</Layout>

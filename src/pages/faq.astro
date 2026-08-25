@@ -1,0 +1,134 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const BASE_URL = `${import.meta.env.BASE_URL.replace(/\/$/, "")}/`;
+
+const faqs = [
+  {
+    question: "Dla kogo prowadzisz lekcje?",
+    answer: "Prowadzę zajęcia dla dzieci, młodzieży i dorosłych, na różnych poziomach zaawansowania. Lekcje dopasowuję do wieku, poziomu i celu konkretnej osoby lub grupy.",
+  },
+  {
+    question: "Czy prowadzisz zajęcia indywidualne i grupowe?",
+    answer: "Tak. Prowadzę zarówno lekcje indywidualne, jak i zajęcia dla grup. W przypadku zajęć grupowych cena ustalana jest indywidualnie, zależnie m.in. od liczby uczestników, częstotliwości i miejsca prowadzenia zajęć.",
+  },
+  {
+    question: "Gdzie odbywają się lekcje?",
+    answer: "Mogę dojechać do ucznia na terenie Sandomierza i w okolicznych miejscowościach. Prowadzę również regularne zajęcia w Tarnobrzegu. Mam własny samochód, dlatego możliwy jest także dalszy dojazd — ustalam to indywidualnie, biorąc pod uwagę odległość, liczbę godzin zajęć i cenę.",
+  },
+  {
+    question: "Czy prowadzisz lekcje online?",
+    answer: "Tak. Lekcje mogą odbywać się również online, niezależnie od miejsca zamieszkania ucznia.",
+  },
+  {
+    question: "Ile kosztuje lekcja?",
+    answer: "Indywidualna lekcja trwająca 60 minut kosztuje 100 zł. Ceny zajęć grupowych ustalam indywidualnie.",
+  },
+  {
+    question: "Jak długo trwa lekcja?",
+    answer: "Standardowa lekcja trwa 60 minut. W przypadku innych potrzeb możemy ustalić inną długość lub częstotliwość zajęć.",
+  },
+  {
+    question: "Jak wyglądają zajęcia?",
+    answer: "Nie prowadzę wszystkich uczniów według jednego schematu. Sposób pracy zależy od poziomu, wieku, zainteresowań i celu. Zajęcia mogą koncentrować się m.in. na komunikacji, gramatyce, wymowie, przygotowaniu do egzaminu, angielskim zawodowym lub konkretnych sytuacjach, w których potrzebny jest język.",
+  },
+  {
+    question: "Czy na lekcjach rozmawiamy tylko po angielsku?",
+    answer: "Staram się, aby angielski był głównym językiem zajęć i żeby uczeń miał jak najwięcej okazji do rzeczywistego używania języka. W razie potrzeby mogę jednak wyjaśnić trudniejsze zagadnienia po polsku.",
+  },
+  {
+    question: "Czy przygotowujesz do egzaminów?",
+    answer: "Tak. Mogę pomóc w przygotowaniu językowym do egzaminów szkolnych i innych sytuacji wymagających konkretnych umiejętności językowych. Zakres przygotowania ustalam na początku na podstawie potrzeb ucznia.",
+  },
+  {
+    question: "Czy prowadzisz Business English i Academic English?",
+    answer: "Tak. Prowadzę zajęcia z Business English związane m.in. ze spotkaniami, rozmowami, prezentacjami i komunikacją zawodową. Oferuję również Academic English dla osób potrzebujących angielskiego podczas studiów, prezentacji, dyskusji czy pracy z tekstami akademickimi.",
+  },
+  {
+    question: "Czy jesteś native speakerem?",
+    answer: "Tak. Pochodzę z Londynu i angielski jest moim językiem ojczystym. Mieszkam i pracuję obecnie w Polsce.",
+  },
+  {
+    question: "Jak umówić pierwszą lekcję?",
+    answer: "Najprościej skontaktować się ze mną telefonicznie lub e-mailem. Możemy najpierw krótko porozmawiać o poziomie angielskiego, celu nauki, miejscu zajęć i dostępnych terminach.",
+  },
+];
+---
+
+<Layout title="FAQ | Nathan Charles Czapnik">
+
+  <header class="navbar">
+    <div class="logo">
+      <span>N</span>
+      <span class="divider"></span>
+      <span>C</span>
+    </div>
+
+    <nav>
+      <a href={`${BASE_URL}`}>Strona główna</a>
+      <a href={`${BASE_URL}o-mnie`}>O mnie</a>
+      <a href={`${BASE_URL}oferta`}>Oferta</a>
+      <a href={`${BASE_URL}blog`}>Blog</a>
+      <a href={`${BASE_URL}faq`}>FAQ</a>
+      <a href={`${BASE_URL}kontakt`}>Kontakt</a>
+    </nav>
+  </header>
+
+  <main class="faq-page">
+    <section class="faq-hero">
+      <p class="faq-kicker">FAQ</p>
+      <h1>Najczęściej zadawane pytania</h1>
+      <div class="faq-rule"></div>
+      <p>Odpowiedzi na najczęstsze pytania dotyczące lekcji, cen, dojazdu i sposobu prowadzenia zajęć.</p>
+    </section>
+
+    <section class="faq-list" aria-label="Najczęściej zadawane pytania">
+      {faqs.map((faq, index) => (
+        <details class="faq-item">
+          <summary>
+            <span>{index + 1}. {faq.question}</span>
+            <span class="faq-control" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-answer-wrap">
+            <p>{faq.answer}</p>
+          </div>
+        </details>
+      ))}
+    </section>
+
+    <section class="faq-cta">
+      <h2>Masz inne pytanie?</h2>
+      <p>Skontaktuj się ze mną — chętnie odpowiem na dodatkowe pytania dotyczące zajęć.</p>
+      <div class="faq-cta-buttons">
+        <a class="button-primary" href="tel:+48577970929">Zadzwoń</a>
+        <a class="button-secondary" href="mailto:nathancharlesczapnik@gmail.com">Napisz e-mail</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-item">
+      <svg class="footer-svg" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 21s6-5.1 6-11a6 6 0 1 0-12 0c0 5.9 6 11 6 11Z"></path>
+        <circle cx="12" cy="10" r="2.2"></circle>
+      </svg>
+      <span>Sandomierz, Polska</span>
+    </div>
+
+    <div class="footer-item">
+      <svg class="footer-svg" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M7 3h3l1 5-2 1.5c1.5 3 3.5 5 6.5 6.5L17 14l4 2v3c0 1.1-.9 2-2 2C10.2 21 3 13.8 3 5c0-1.1.9-2 2-2h2Z"></path>
+      </svg>
+      <a href="tel:+48577970929">+48 577 970 929</a>
+    </div>
+
+    <div class="footer-item">
+      <svg class="footer-svg" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3" y="5" width="18" height="14" rx="1"></rect>
+        <path d="m4 7 8 6 8-6"></path>
+      </svg>
+      <a href="mailto:nathancharlesczapnik@gmail.com">nathancharlesczapnik@gmail.com</a>
+    </div>
+  </footer>
+
+</Layout>

@@ -1,0 +1,434 @@
+/* =====================================================
+   ABOUT PAGE
+===================================================== */
+
+.about-page{
+
+    max-width:1300px;
+
+    margin:auto;
+
+    overflow:hidden;
+
+}
+
+/* ---------- HERO ---------- */
+
+.about-hero{
+
+    display:grid;
+
+    grid-template-columns:1.1fr 0.9fr;
+
+    gap:80px;
+
+    padding:72px 40px 64px;
+
+    align-items:start;
+
+}
+
+.page-kicker{
+
+    font-size:14px;
+
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+
+    margin-bottom:18px;
+
+    color:var(--orange);
+
+}
+
+.about-copy h1{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:78px;
+
+    line-height:.95;
+
+    margin-bottom:24px;
+
+}
+
+.about-copy p{
+
+    font-size:20px;
+
+    line-height:1.9;
+
+    color:var(--text-light);
+
+    margin-bottom:28px;
+
+}
+
+.about-photo{
+
+    background:#306F8D;
+
+    overflow:hidden;
+
+}
+
+.about-photo img{
+
+    width:100%;
+
+    display:block;
+
+    height:auto;
+
+    object-fit:cover;
+
+}
+
+/* ---------- QUALIFICATIONS ---------- */
+
+.qualifications{
+
+    padding:64px 40px;
+
+}
+
+.qualifications h2{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:52px;
+
+    margin-bottom:36px;
+
+}
+
+.qualification-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:32px;
+
+}
+
+.qualification-card{
+
+    padding:48px;
+
+    min-height:280px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+}
+
+.qualification-card h3{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:42px;
+
+    margin-bottom:18px;
+
+}
+
+.qualification-card p{
+
+    font-size:22px;
+
+}
+
+.qualification-card span{
+
+    font-size:16px;
+
+    color:var(--text-light);
+
+}
+
+.qualification-kinari{
+
+    background:var(--panel);
+
+}
+
+.qualification-pink{
+
+    background:var(--pink);
+
+}
+
+.qualification-sage{
+
+    background:var(--sage);
+
+}
+
+/* ---------- TEXT SECTIONS ---------- */
+
+.about-section{
+
+    padding:56px 40px;
+
+    max-width:980px;
+
+}
+
+.about-section h2{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:52px;
+
+    margin-bottom:36px;
+
+}
+
+.about-section p{
+
+    font-size:20px;
+
+    line-height:1.9;
+
+    color:var(--text-light);
+
+    margin-bottom:28px;
+
+}
+
+/* ---------- CTA ---------- */
+
+.about-cta{
+
+    text-align:center;
+
+    padding:72px 40px;
+
+}
+
+.about-cta h2{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:58px;
+
+    margin-bottom:48px;
+
+}
+
+.about-cta .button-primary,
+.about-cta .button-secondary{
+
+    display:inline-flex;
+
+    margin:0 6px;
+
+}
+
+.interests{
+
+    padding-top:40px;
+
+    padding-bottom:32px;
+
+}
+
+@media (max-width: 1024px){
+
+    .about-hero{
+
+        grid-template-columns:1fr 0.85fr;
+
+        gap:40px;
+
+        padding:64px 32px 56px;
+
+    }
+
+    .about-copy h1{
+
+        font-size:64px;
+
+    }
+
+    .about-copy p,
+    .about-section p{
+
+        font-size:18px;
+
+        line-height:1.8;
+
+    }
+
+    .qualifications{
+
+        padding:56px 32px;
+
+    }
+
+    .qualification-grid{
+
+        gap:20px;
+
+    }
+
+    .qualification-card{
+
+        padding:32px;
+
+    }
+
+    .qualification-card h3{
+
+        font-size:36px;
+
+    }
+
+    .about-section{
+
+        max-width:760px;
+
+        padding:56px 32px;
+
+    }
+
+    .about-section h2,
+    .qualifications h2{
+
+        font-size:44px;
+
+    }
+
+    .about-cta{
+
+        padding:72px 32px;
+
+    }
+
+    .about-cta h2{
+
+        font-size:50px;
+
+    }
+
+}
+
+@media (max-width: 700px){
+
+    .about-hero{
+
+        grid-template-columns:1fr;
+
+        gap:48px;
+
+        padding:48px 24px 56px;
+
+    }
+
+    .about-copy h1{
+
+        font-size:56px;
+
+    }
+
+    .about-copy p,
+    .about-section p{
+
+        font-size:17px;
+
+        line-height:1.75;
+
+    }
+
+    .about-photo{
+
+        max-width:520px;
+
+        margin:auto;
+
+    }
+
+    .qualifications{
+
+        padding:48px 24px;
+
+    }
+
+    .qualifications h2{
+
+        font-size:42px;
+
+        margin-bottom:32px;
+
+    }
+
+    .qualification-grid{
+
+        grid-template-columns:1fr;
+
+        gap:16px;
+
+    }
+
+    .qualification-card{
+
+        min-height:220px;
+
+        padding:32px;
+
+    }
+
+    .qualification-card h3{
+
+        font-size:38px;
+
+    }
+
+    .about-section{
+
+        max-width:none;
+
+        padding:48px 24px;
+
+    }
+
+    .about-section h2{
+
+        font-size:40px;
+
+        margin-bottom:28px;
+
+    }
+
+    .about-cta{
+
+        padding:56px 24px;
+
+    }
+
+    .about-cta h2{
+
+        font-size:44px;
+
+        margin-bottom:36px;
+
+    }
+
+    .about-cta .button-primary,
+    .about-cta .button-secondary{
+
+        width:100%;
+
+        max-width:320px;
+
+        margin:6px auto;
+
+    }
+
+}

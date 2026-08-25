@@ -1,0 +1,83 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+const BASE_URL = `${import.meta.env.BASE_URL.replace(/\/$/, "")}/`;
+const essays = await getCollection("essays");
+---
+
+<Layout title="Blog | Nathan Charles Czapnik">
+
+  <header class="navbar">
+    <div class="logo">
+      <span>N</span>
+      <span class="divider"></span>
+      <span>C</span>
+    </div>
+
+    <nav>
+      <a href={`${BASE_URL}`}>Strona główna</a>
+      <a href={`${BASE_URL}o-mnie`}>O mnie</a>
+      <a href={`${BASE_URL}oferta`}>Oferta</a>
+      <a href={`${BASE_URL}blog`}>Blog</a>
+      <a href={`${BASE_URL}faq`}>FAQ</a>
+      <a href={`${BASE_URL}kontakt`}>Kontakt</a>
+    </nav>
+  </header>
+
+  <main class="blog-page">
+    <section class="blog-hero">
+      <p class="blog-kicker">BLOG</p>
+      <h1>Artykuły i eseje</h1>
+      <div class="blog-rule"></div>
+      <p>
+        Wybrane eseje i artykuły napisane w języku angielskim.
+      </p>
+    </section>
+
+    <section class="essay-list" aria-label="Lista artykułów">
+      {essays.map((essay) => (
+        <article class="essay-preview">
+          <div class="essay-preview-meta">
+            <span>{essay.data.label}</span>
+          </div>
+          <div class="essay-preview-content">
+            <h2>
+              <a href={`${BASE_URL}blog/${essay.id}`}>{essay.data.title}</a>
+            </h2>
+            <p>{essay.data.description}</p>
+            <a class="essay-read-more" href={`${BASE_URL}blog/${essay.id}`}>
+              Czytaj dalej <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+      ))}
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-item">
+      <svg class="footer-svg" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 21s6-5.1 6-11a6 6 0 1 0-12 0c0 5.9 6 11 6 11Z"></path>
+        <circle cx="12" cy="10" r="2.2"></circle>
+      </svg>
+      <span>Sandomierz, Polska</span>
+    </div>
+
+    <div class="footer-item">
+      <svg class="footer-svg" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M7 3h3l1 5-2 1.5c1.5 3 3.5 5 6.5 6.5L17 14l4 2v3c0 1.1-.9 2-2 2C10.2 21 3 13.8 3 5c0-1.1.9-2 2-2h2Z"></path>
+      </svg>
+      <a href="tel:+48577970929">+48 577 970 929</a>
+    </div>
+
+    <div class="footer-item">
+      <svg class="footer-svg" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3" y="5" width="18" height="14" rx="1"></rect>
+        <path d="m4 7 8 6 8-6"></path>
+      </svg>
+      <a href="mailto:nathancharlesczapnik@gmail.com">nathancharlesczapnik@gmail.com</a>
+    </div>
+  </footer>
+
+</Layout>
