@@ -3,13 +3,53 @@ import "../styles/global.css";
 
 interface Props {
 	title?: string;
+	description?: string;
+	type?: "website" | "article";
+	article?: {
+		headline: string;
+		url: URL;
+		image?: URL;
+	};
 }
 
 const {
-	title = "Nathan Charles Czapnik Business English Tutor"
+	title = "Nathan Charles Czapnik Business English Tutor",
+	description = "Nathan Charles Czapnik – native speaker z Londynu. Indywidualne i grupowe lekcje angielskiego w Sandomierzu, Tarnobrzegu i online.",
+	type = "website",
+	article,
 } = Astro.props;
 
 const base = `${import.meta.env.BASE_URL.replace(/\/$/, "")}/`;
+const canonicalUrl = new URL(Astro.url);
+const personSchema = {
+	"@context": "https://schema.org",
+	"@type": "Person",
+	name: "Nathan Charles Czapnik",
+	alternateName: "Nathan Czapnik",
+	url: new URL(base, Astro.site),
+	jobTitle: "Business English Tutor",
+	knowsLanguage: ["en", "pl"],
+};
+const websiteSchema = {
+	"@context": "https://schema.org",
+	"@type": "WebSite",
+	name: "Nathan Charles Czapnik",
+	url: new URL(base, Astro.site),
+};
+const articleSchema = article
+	? {
+			"@context": "https://schema.org",
+			"@type": "Article",
+			headline: article.headline,
+			author: {
+				"@type": "Person",
+				name: "Nathan Charles Czapnik",
+			},
+			mainEntityOfPage: article.url,
+			url: article.url,
+			...(article.image ? { image: article.image } : {}),
+		}
+		: undefined;
 ---
 
 <!doctype html>
@@ -24,6 +64,21 @@ const base = `${import.meta.env.BASE_URL.replace(/\/$/, "")}/`;
 		<meta name="generator" content={Astro.generator} />
 
 		<title>{title}</title>
+		<meta name="description" content={description} />
+		<link rel="canonical" href={canonicalUrl} />
+
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonicalUrl} />
+		<meta property="og:type" content={type} />
+		<meta property="og:site_name" content="Nathan Charles Czapnik" />
+		<meta property="og:locale" content="pl_PL" />
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+		<script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+		{articleSchema && <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />}
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

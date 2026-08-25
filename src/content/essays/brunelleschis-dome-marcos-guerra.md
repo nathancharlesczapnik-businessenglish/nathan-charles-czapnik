@@ -7,7 +7,7 @@ heroImage: "images/brunelleschis-dome.jpg"
 secondaryImage: "images/marcos-guerra-compania-de-jesus.jpg"
 ---
 
-# Brunelleschi's Dome and Its Influence on Marcos Guerra's Compañía de Jesús
+## Brunelleschi's Dome and Its Influence on Marcos Guerra's Compañía de Jesús
 
 Brunelleschi's dome is one of the most important technical innovations of early modern architecture. Built during an era of reformation and proclaimed "renaissance," Brunelleschi's dome was a seminal architectural invention in terms of how it inspired the future construction of not only domes, but a myriad of other architectural pieces. For instance, Brunelleschi's influence on the Italian Jesuit architect and priest Marcos Guerra is one of explicit notability. In Guerra's design of the Compañía de Jesús in Quito, Ecuador, we see how Brunelleschi's successors were inspired by his radically new reinvention of the cupola in the Cathedral of Santa Maria del Fiore, Florence, to design their own visionary new domes.
 
