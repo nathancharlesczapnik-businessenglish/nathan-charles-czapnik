@@ -18,7 +18,7 @@ const BASE_URL = `${import.meta.env.BASE_URL.replace(/\/$/, "")}/`;
 
 <Layout
   title={`${essay.data.title} | Blog | Nathan Charles Czapnik`}
-  description={essay.data.description}
+  description={essay.data.seoDescription ?? essay.data.description}
   type="article"
   article={{
     headline: essay.data.title,

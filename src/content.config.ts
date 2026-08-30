@@ -7,6 +7,7 @@ const essays = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
+    seoDescription: z.string().optional(),
     label: z.string(),
     introduction: z.string(),
     heroImage: z.string(),

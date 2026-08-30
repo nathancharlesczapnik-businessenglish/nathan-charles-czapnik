@@ -1,6 +1,7 @@
 ---
 title: "Brunelleschi's Dome and Its Influence on Marcos Guerra's Compañía de Jesús"
 description: "Esej z czasów studiów na Uniwersytecie Goldsmiths w Londynie, napisany na kierunku Historia Sztuki. Dotyczy wpływu kopuły Brunelleschiego we Florencji na późniejszą architekturę kolonialną — a konkretnie na kościół Compañía de Jesús w Quito, w Ekwadorze, zaprojektowany przez jezuickiego architekta Marcosa Guerrę. Publikuję go tutaj w oryginalnej, angielskiej wersji."
+seoDescription: "An art history essay on Brunelleschi's Dome and its influence on Marcos Guerra's design of the Compañía de Jesús in Quito."
 label: "Esej uniwersytecki · Historia sztuki"
 introduction: "Esej z czasów studiów na Uniwersytecie Goldsmiths w Londynie, napisany na kierunku Historia Sztuki. Dotyczy wpływu kopuły Brunelleschiego we Florencji na późniejszą architekturę kolonialną — a konkretnie na kościół Compañía de Jesús w Quito, w Ekwadorze, zaprojektowany przez jezuickiego architekta Marcosa Guerrę. Publikuję go tutaj w oryginalnej, angielskiej wersji."
 heroImage: "images/brunelleschis-dome.jpg"
